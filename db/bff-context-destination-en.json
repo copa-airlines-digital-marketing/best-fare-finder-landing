@@ -1,0 +1,346 @@
+[
+   {
+     "cityName": "San Andres Island",
+     "iata": "ADZ"
+   },
+   {
+     "cityName": "Asuncion",
+     "iata": "ASU"
+   },
+   {
+     "cityName": "Atlanta",
+     "iata": "ATL"
+   },
+   {
+     "cityName": "Aruba",
+     "iata": "AUA"
+   },
+   {
+     "cityName": "Armenia",
+     "iata": "AXM"
+   },
+   {
+     "cityName": "Barranquilla",
+     "iata": "BAQ"
+   },
+   {
+     "cityName": "Bucaramanga",
+     "iata": "BGA"
+   },
+   {
+     "cityName": "Bridgetown",
+     "iata": "BGI"
+   },
+   {
+     "cityName": "Barcelona",
+     "iata": "BLA"
+   },
+   {
+     "cityName": "Bogota",
+     "iata": "BOG"
+   },
+   {
+     "cityName": "Boston",
+     "iata": "BOS"
+   },
+   {
+     "cityName": "Brasilia",
+     "iata": "BSB"
+   },
+   {
+     "cityName": "Belize",
+     "iata": "BZE"
+   },
+   {
+     "cityName": "Caracas",
+     "iata": "CCS"
+   },
+   {
+     "cityName": "Chiclayo",
+     "iata": "CIX"
+   },
+   {
+     "cityName": "Cali",
+     "iata": "CLO"
+   },
+   {
+     "cityName": "Belo Horizonte",
+     "iata": "CNF"
+   },
+   {
+     "cityName": "Cordoba",
+     "iata": "COR"
+   },
+   {
+     "cityName": "Cartagena",
+     "iata": "CTG"
+   },
+   {
+     "cityName": "Cucuta",
+     "iata": "CUC"
+   },
+   {
+     "cityName": "Cancun",
+     "iata": "CUN"
+   },
+   {
+     "cityName": "Curacao",
+     "iata": "CUR"
+   },
+   {
+     "cityName": "David",
+     "iata": "DAV"
+   },
+   {
+     "cityName": "Denver",
+     "iata": "DEN"
+   },
+   {
+     "cityName": "Buenos Aires",
+     "iata": "EZE"
+   },
+   {
+     "cityName": "Fort Lauderdale",
+     "iata": "FLL"
+   },
+   {
+     "cityName": "Guadalajara",
+     "iata": "GDL"
+   },
+   {
+     "cityName": "Georgetown",
+     "iata": "GEO"
+   },
+   {
+     "cityName": "Rio de Janeiro",
+     "iata": "GIG"
+   },
+   {
+     "cityName": "Sao Paulo",
+     "iata": "GRU"
+   },
+   {
+     "cityName": "Guatemala",
+     "iata": "GUA"
+   },
+   {
+     "cityName": "Guayaquil",
+     "iata": "GYE"
+   },
+   {
+     "cityName": "Havana",
+     "iata": "HAV"
+   },
+   {
+     "cityName": "Holguin",
+     "iata": "HOG"
+   },
+   {
+     "cityName": "Washington",
+     "iata": "IAD"
+   },
+   {
+     "cityName": "New York",
+     "iata": "JFK"
+   },
+   {
+     "cityName": "Kingston",
+     "iata": "KIN"
+   },
+   {
+     "cityName": "Las Vegas",
+     "iata": "LAS"
+   },
+   {
+     "cityName": "Los Angeles",
+     "iata": "LAX"
+   },
+   {
+     "cityName": "Lima",
+     "iata": "LIM"
+   },
+   {
+     "cityName": "Liberia",
+     "iata": "LIR"
+   },
+   {
+     "cityName": "Manaus",
+     "iata": "MAO"
+   },
+   {
+     "cityName": "Maracaibo",
+     "iata": "MAR"
+   },
+   {
+     "cityName": "Montego Bay",
+     "iata": "MBJ"
+   },
+   {
+     "cityName": "Orlando",
+     "iata": "MCO"
+   },
+   {
+     "cityName": "Medellin",
+     "iata": "MDE"
+   },
+   {
+     "cityName": "Mendoza",
+     "iata": "MDZ"
+   },
+   {
+     "cityName": "Mexico City",
+     "iata": "MEX"
+   },
+   {
+     "cityName": "Managua",
+     "iata": "MGA"
+   },
+   {
+     "cityName": "Miami",
+     "iata": "MIA"
+   },
+   {
+     "cityName": "New Orleans",
+     "iata": "MSY"
+   },
+   {
+     "cityName": "Monterrey",
+     "iata": "MTY"
+   },
+   {
+     "cityName": "Montevideo",
+     "iata": "MVD"
+   },
+   {
+     "cityName": "Nassau",
+     "iata": "NAS"
+   },
+   {
+     "cityName": "Chicago",
+     "iata": "ORD"
+   },
+   {
+     "cityName": "Port Au Prince",
+     "iata": "PAP"
+   },
+   {
+     "cityName": "Paramaribo",
+     "iata": "PBM"
+   },
+   {
+     "cityName": "Pereira",
+     "iata": "PEI"
+   },
+   {
+     "cityName": "Porto Alegre",
+     "iata": "POA"
+   },
+   {
+     "cityName": "Port of Spain",
+     "iata": "POS"
+   },
+   {
+     "cityName": "Panama",
+     "iata": "PTY"
+   },
+   {
+     "cityName": "Punta Cana",
+     "iata": "PUJ"
+   },
+   {
+     "cityName": "Puerto Vallarta",
+     "iata": "PVR"
+   },
+   {
+     "cityName": "Recife",
+     "iata": "REC"
+   },
+   {
+     "cityName": "Rosario",
+     "iata": "ROS"
+   },
+   {
+     "cityName": "San Salvador",
+     "iata": "SAL"
+   },
+   {
+     "cityName": "San Pedro Sula",
+     "iata": "SAP"
+   },
+   {
+     "cityName": "Santiago de Chile",
+     "iata": "SCL"
+   },
+   {
+     "cityName": "Santo Domingo",
+     "iata": "SDQ"
+   },
+   {
+     "cityName": "San Francisco",
+     "iata": "SFO"
+   },
+   {
+     "cityName": "San José",
+     "iata": "SJO"
+   },
+   {
+     "cityName": "San Juan",
+     "iata": "SJU"
+   },
+   {
+     "cityName": "Salta",
+     "iata": "SLA"
+   },
+   {
+     "cityName": "Santa Marta",
+     "iata": "SMR"
+   },
+   {
+     "cityName": "Santa Clara",
+     "iata": "SNU"
+   },
+   {
+     "cityName": "Salvador",
+     "iata": "SSA"
+   },
+   {
+     "cityName": "Stgo. de los Caballeros",
+     "iata": "STI"
+   },
+   {
+     "cityName": "St Maarten",
+     "iata": "SXM"
+   },
+   {
+     "cityName": "Tampa",
+     "iata": "TPA"
+   },
+   {
+     "cityName": "Quito",
+     "iata": "UIO"
+   },
+   {
+     "cityName": "Valencia",
+     "iata": "VLN"
+   },
+   {
+     "cityName": "Santa Cruz",
+     "iata": "VVI"
+   },
+   {
+     "cityName": "Comayagua",
+     "iata": "XPL"
+   },
+   {
+     "cityName": "Montreal",
+     "iata": "YUL"
+   },
+   {
+     "cityName": "Toronto",
+     "iata": "YYZ"
+   },
+   {
+     "cityName": "Mexico City",
+     "iata": "NLU"
+   }
+  ]

@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.copaair.com/promotions/assets/css/cm-design-system-specific.min.css">
+    <link rel="stylesheet" href="scss/bestFareFinder.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="cm-design-system styles-override" id="originSelector">
+
+
+        <section class="container">
+            <div class="selector">
+                <h2>Flight deals from:</h2>
+
+                <div class="btn-origins">
+                    <span class="mainOriginBtn">
+                        <span class="defaultSel">Select your origin</span>
+                        <svg class="chevSel" width="30" height="17" viewBox="0 0 28 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27.225 1.22502C26.25 0.250024 24.675 0.250024 23.7 1.22502L14 10.925L4.30001 1.22502C3.32501 0.250023 1.75 0.250023 0.775004 1.22502C-0.199996 2.20002 -0.199996 3.77502 0.775004 4.75002L12.25 16.225C13.225 17.2 14.8 17.2 15.775 16.225L27.25 4.75002C28.2 3.80002 28.2 2.20002 27.225 1.22502Z"
+                                fill="#FF0000" />
+                        </svg>
+                    </span>
+
+
+                    <div class="dropdownOrigins">
+                        <ul>
+                            <li><a href="#">Orlando</a></li>
+                            <li><a href="best-fare-finder?em_o=EZE#originSelector">Argentina</a></li>
+                            <li><a href="best-fare-finder?em_o=MIA#originSelector">Miami</a></li>
+                            <li><a href="best-fare-finder?em_o=MIA#originSelector">Cancún</a></li>
+                            <li><a class="active" href="best-fare-finder?em_o=PTY#originSelector">Panama</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="selector">
+                <h2>Flight deals from:</h2>
+
+            </div>
+
+        </section>
+
+        </section>
+    </div>
+    <script>
+        const options = document.querySelectorAll('.dropdownOrigins li');
+        const selected = document.querySelector('.defaultSel');
+
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                selected.innerText = option.innerText;
+
+            })
+        })
+    </script>
+</body>
+
+</html>

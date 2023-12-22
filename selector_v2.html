@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.copaair.com/promotions/assets/css/cm-design-system-specific.min.css">
+    <link rel="stylesheet" href="scss/bestFareFinder.css">
+    <script src="https://www.copaair.com/promotions/airtrfx-lp/assets/js/destination-context-en.min.js"></script>
+    <script src="/db/validRoutes.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="cm-design-system styles-override" id="originSelector">
+
+        <section class="container">
+            <form id="odForm" action="" method="POST">
+                <div class="selector ">
+
+                    <h2 class="pointerH2">Flight deals from:
+
+
+                        <select name="origins" class="selectOriDest" id="origin-selector"> </select>
+                        to
+                        <select name="destinations" class="selectOriDest selectDestOnly" id="destination-selector">
+                        </select>
+                    </h2>
+
+                </div>
+                <h3 id="showStopper" class="erro ">Invalid Route!</h3>
+                <div class="inputShort">
+
+
+                    <input class="goBtn" type="submit" value="Find Fares">
+                    <!--   <input id="resetSelection" class="resetBtn" type="reset" value="Reset Selection">  Reset-->
+
+                </div>
+            </form>
+
+
+
+
+        </section>
+    </div>
+    <script type="text/javascript" src="/js/best-fare-finder-en.js"></script>
+    <script type="text/javascript" src="/js/SelectShortWord.js"></script>
+
+</body>
+
+</html>

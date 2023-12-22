@@ -1,0 +1,54 @@
+.destinations {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.destination {
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 142px 8px 72px;
+}
+
+@media only screen and (min-width: 395px) {
+  .destination {
+    height: 304px;
+    grid-template-rows: 200px 32px 72px;
+  }
+}
+
+.destination__image {
+  height: auto;
+  grid-row: 1 / span 3;
+}
+
+.destination__info {
+  background-color: #0032A0;
+  border-radius: 16px;
+  width: 100%;
+  grid-row: 2 / 4 !important;
+  display: flex;
+  /* grid-template-columns: auto auto;*/
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.destination__info__title {
+  font-family: 'Gilroy';
+  font-size: 19px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+@media only screen and (min-width: 395px) {
+  .destination__info__title {
+    font-size: 1.4em;
+  }
+}
