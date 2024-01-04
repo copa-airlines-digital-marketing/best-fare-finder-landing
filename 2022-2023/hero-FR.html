@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.copaair.com/promotions/assets/css/cm-design-system-specific.min.css">
+    <link rel="stylesheet" href="scss/bestFareFinder.css">
+    <script src="https://copa-contents-produccion.s3.amazonaws.com/promotions/airtrfx-lp/assets/js/destination-context-fr.min.js"></script>
+    <script src="/db/validRoutes.js"></script>
+</head>
+
+<body>
+    <div class="cm-design-system styles-override">
+        <div class="bffHeader">
+            <div class="bffHeader__imageSet">
+                <div class="bffHeader__carousel ">
+                    <picture class="d-appear-1">
+                        <source media="(min-width: 1024px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-1.jpg" class="" />
+                        <source media="(min-width: 768px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1024-1.jpg"
+                            class="" /> <img alt=""
+                            src="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1080-1.jpg"
+                            class="bffHeader__image re-item" rel="" /> </picture>
+                    <picture class="d-appear-2 ">
+                        <source media="(min-width: 1024px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-2.jpg" class="" />
+                        <source media="(min-width: 768px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1024-2.jpg"
+                            class="" /> <img alt=""
+                            src="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1080-2.jpg"
+                            class="bffHeader__image " rel="" /> </picture>
+                    <picture class="d-appear-3">
+                        <source media="(min-width: 1024px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-3.jpg" class="" />
+                        <source media="(min-width: 768px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1024-3.jpg"
+                            class="" /> <img alt=""
+                            src="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1080-3.jpg"
+                            class="bffHeader__image " rel="" /> </picture>
+                    <picture class="">
+                        <source media="(min-width: 1024px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-4.jpg" class="" />
+                        <source media="(min-width: 768px)"
+                            srcset="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1024-4.jpg"
+                            class="" /> <img alt=""
+                            src="https://www.copaair.com/promotions/destinations/img/bff-hero-mobile-1080-4.jpg"
+                            class="bffHeader__image " rel="" /> </picture>
+                </div>
+            </div>
+            <div class="bffHeader__overlay"></div>
+            <article class="bffHeader__logo"><img class="bffHeader__logo__set"
+                    src="https://www.copaair.com/promotions/destinations/img/best-fare-finder-logo-white.svg"
+                    alt="Best Fare Finder" /></article>
+            <div class="bffHeader__selector" id="originSelector">
+                <form id="odForm" action="" method="POST">
+                    <div class="selector ">
+                        <h2 class="pointerH2">Tarifs à partir de:<select name="origins" class="selectOriDest"
+                                id="origin-selector"></select>a<select name="destinations"
+                                class="selectOriDest selectDestOnly" id="destination-selector"></select></h2>
+                    </div>
+                    <div class="inputShort"><input class="goBtn" type="submit" value="Rechercher" /></div>
+                </form>
+                <h3 id="showStopper" class="erro ">Invalid Route!</h3>
+            </div>
+        </div>
+    </div>
+    <p></p>
+
+
+    <p>
+        <script src="./js/best-fare-finder-fr.js"></script>
+    
+    </p>
+</body>
+
+</html>
