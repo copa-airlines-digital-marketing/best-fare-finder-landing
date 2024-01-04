@@ -12,7 +12,6 @@ defaultDest.value = 'DDD';
 destDropdown.add(defaultDest);
 const searchOdForm = document.getElementById("odForm") // calls the form for reactive url params
 
-
 var histoSelector = document.getElementsByClassName('search-container')[0];
 var histoOriDesSelector = document.getElementsByClassName('select-destination');
 
@@ -106,7 +105,7 @@ searchOdForm.addEventListener("submit", (e) => {
     if (o === 'OOO' && d === 'DDD') {
         stopMessage.classList.remove('erro');
         stopMessage.classList.add('errorHide');
-        stopMessage.innerHTML = "Selecciona un origen y un destino.";
+        stopMessage.innerHTML = "¡Selecciona un origen y un destino!";
         noHistoSelect();
     } else if (o != 'OOO' && d === 'DDD') {
         d = '';
@@ -251,11 +250,11 @@ oriDropdown.addEventListener('change', function () {
     var presearch = (validRoutes.filter(finderfirst));
     console.log("presearch = " + presearch);
     var onlyValidDestinations = presearch.map(string => string.slice(-3));
-    console.log("destinos validos: " + onlyValidDestinations);
+    console.log("valid destinations: " + onlyValidDestinations);
     resetDestinationDropdown();
     selectorCheck();
     let defaultDest = document.createElement('option');
-    defaultDest.text = 'Selecciona un destino';
+    defaultDest.text = 'Select your destination';
     defaultDest.value = 'DDD';
     destDropdown.add(defaultDest);
 

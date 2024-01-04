@@ -106,7 +106,7 @@ searchOdForm.addEventListener("submit", (e) => {
     if (o === 'OOO' && d === 'DDD') {
         stopMessage.classList.remove('erro');
         stopMessage.classList.add('errorHide');
-        stopMessage.innerHTML = "Sélectionne un point de départ et une destination.";
+        stopMessage.innerHTML = "Sélectionne un point de départ et une destination!";
         noHistoSelect();
     } else if (o != 'OOO' && d === 'DDD') {
         d = '';
@@ -176,14 +176,14 @@ searchOdForm.addEventListener("submit", (e) => {
 searchOdForm.addEventListener("reset", (e) => {
 
     let defaultOri = document.createElement('option');
-    defaultOri.text = 'Point de départ';
+    defaultOri.text = 'Selecciona tu origen';
     defaultOri.value = 'OOO';
     oriDropdown.add(defaultOri);
     let destDropdown = document.getElementById('destination-selector');
     destDropdown.length = 0;
 
     let defaultDest = document.createElement('option');
-    defaultDest.text = 'Destination';
+    defaultDest.text = 'Selecciona un destino';
     defaultDest.value = 'DDD';
     destDropdown.add(defaultDest);
 
@@ -251,11 +251,11 @@ oriDropdown.addEventListener('change', function () {
     var presearch = (validRoutes.filter(finderfirst));
     console.log("presearch = " + presearch);
     var onlyValidDestinations = presearch.map(string => string.slice(-3));
-    console.log("destinos validos: " + onlyValidDestinations);
+    console.log("valid destinations: " + onlyValidDestinations);
     resetDestinationDropdown();
     selectorCheck();
     let defaultDest = document.createElement('option');
-    defaultDest.text = 'Destination';
+    defaultDest.text = 'Select your destination';
     defaultDest.value = 'DDD';
     destDropdown.add(defaultDest);
 
