@@ -11,80 +11,12 @@ defaultDest.text = 'Selecciona un destino';
 defaultDest.value = 'DDD';
 destDropdown.add(defaultDest);
 const searchOdForm = document.getElementById("odForm") // calls the form for reactive url params
-
-
-var histoSelector = document.getElementsByClassName('search-container')[0];
 var histoOriDesSelector = document.getElementsByClassName('select-destination');
 
-console.log("Histogram selector really removed");
 
 refillOrigins();
 refillDestinations();
 selectorCheck();
-
-function refillOrigins() {
-    Object.keys(destinationContext).forEach(key => {
-
-        let option;
-        option1 = document.createElement('option');
-        option1.text = `${destinationContext[key].cityName} | ${key}`;
-        option1.value = key;
-        oriDropdown.add(option1);
-        option1.disable = true;
-    });
-    sortOD(oriDropdown);
-    addDefaultOrigin(oriDropdown);
-
-
-}
-function addDefaultOrigin(originsSORTED) {
-
-    defaultOri.text = 'Selecciona tu origen';
-    defaultOri.value = 'OOO';
-    oriDropdown.insertBefore(defaultOri, oriDropdown.firstChild);
-
-
-}
-
-function sortOD(ORIGINS) {
-    var tArr = new Array();
-    for (var i = 0; i < ORIGINS.options.length; i++) {
-        tArr[i] = new Array();
-        tArr[i][0] = ORIGINS.options[i].text;
-        tArr[i][1] = ORIGINS.options[i].value;
-    }
-    tArr.sort();
-    while (ORIGINS.options.length > 0) {
-        ORIGINS.options[0] = null;
-
-    }
-    for (var i = 0; i < tArr.length; i++) {
-        var op = new Option(tArr[i][0], tArr[i][1]);
-        ORIGINS.options[i] = op;
-    }
-    return;
-}
-
-function refillDestinations() {
-
-    Object.keys(destinationContext).forEach(key => {
-        option2 = document.createElement('option');
-        option2.text = `${destinationContext[key].cityName} | ${key}`;
-        option2.value = key;
-        destDropdown.add(option2);
-    });
-    sortOD(destDropdown);
-    addDefaultDestination(destDropdown);
-}
-
-
-function addDefaultDestination(destinationsSORTED) {
-
-    defaultDest.text = 'Selecciona un destino';
-    defaultDest.value = 'DDD';
-    destDropdown.insertBefore(defaultDest, destDropdown.firstChild);
-
-}
 
 
 
@@ -96,7 +28,6 @@ searchOdForm.addEventListener("submit", (e) => {
     var o = document.getElementById('origin-selector').value;
     var d = document.getElementById('destination-selector').value;
     const stopMessage = document.getElementById('showStopper');
-    var histoSelector = document.getElementsByClassName('search-container')[0];
     var histoOriDesSelector = document.getElementsByClassName('select-destination');
 
     console.log(`o= ${o}`)
@@ -106,7 +37,7 @@ searchOdForm.addEventListener("submit", (e) => {
     if (o === 'OOO' && d === 'DDD') {
         stopMessage.classList.remove('erro');
         stopMessage.classList.add('errorHide');
-        stopMessage.innerHTML = "Selecciona un origen y un destino.";
+        stopMessage.innerHTML = "¡Selecciona un origen y un destino!";
         noHistoSelect();
     } else if (o != 'OOO' && d === 'DDD') {
         d = '';
@@ -135,16 +66,6 @@ searchOdForm.addEventListener("submit", (e) => {
         refillDestinations();
     }
 
-
-    function noHistoSelect() {
-        histoSelector.classList.add('display-no');
-    }
-    function getHistoSelect() {
-        histoSelector.classList.add("display-no");
-        histoOriDesSelector[0].disabled = true;
-        histoOriDesSelector[1].disabled = true;
-
-    }
     function refillOrigins() {
         Object.keys(destinationContext).forEach(key => {
 
@@ -192,52 +113,6 @@ searchOdForm.addEventListener("reset", (e) => {
     localStorage.clear();
 })
 
-
-
-window.onload = function () {
-
-
-    setTimeout(() => {
-        if (oriVal === null && destVal === null) {
-            document.getElementsByClassName('search-container')[0].style.display = "none";
-            document.getElementById('histoTitle').style.display = "none";
-
-        }
-        else if (oriVal === 'OOO' && destVal === 'DDD') {
-            document.getElementsByClassName('search-container')[0].style.display = "none";
-            document.getElementById('histoTitle').style.display = "none";
-
-        }
-        else if (oriVal != 'OOO' && destVal != 'DDD') {
-            document.getElementsByClassName('search-container')[0].style.display = "block";
-            document.getElementById('histoTitle').style.display = "block";
-            histoOriDesSelector[0].disabled = true;
-            histoOriDesSelector[1].disabled = true;
-
-        }
-
-
-    }, 4000);
-
-
-}
-
-
-
-
-
-function noHistoSelect() {
-    document.getElementsByClassName('search-container')[0].style.display = "none";
-}
-function getHistoSelect() {
-
-    document.getElementsByClassName('search-container')[0].classList.remove('display-no');
-    histoOriDesSelector[0].disabled = true;
-    histoOriDesSelector[1].disabled = true;
-
-}
-
-/*Starts saving for URL Params */
 console.log(localStorage);
 oriDropdown.addEventListener('change', function () {
     localStorage.setItem('oData', this.value); // saves origin value at localStorage
@@ -251,11 +126,11 @@ oriDropdown.addEventListener('change', function () {
     var presearch = (validRoutes.filter(finderfirst));
     console.log("presearch = " + presearch);
     var onlyValidDestinations = presearch.map(string => string.slice(-3));
-    console.log("destinos validos: " + onlyValidDestinations);
+    console.log("valid destinations: " + onlyValidDestinations);
     resetDestinationDropdown();
     selectorCheck();
     let defaultDest = document.createElement('option');
-    defaultDest.text = 'Selecciona un destino';
+    defaultDest.text = 'Select your destination';
     defaultDest.value = 'DDD';
     destDropdown.add(defaultDest);
 
@@ -270,7 +145,7 @@ oriDropdown.addEventListener('change', function () {
 
             var value = destinationContext[key];
             option2new = document.createElement('option');
-             option2new.text = destinationContext[key] && destinationContext[key].cityName;
+            option2new.text = `${destinationContext[key].cityName} | ${key}`;
             option2new.value = key;
             destDropdown.add(option2new);
 
@@ -286,7 +161,6 @@ oriDropdown.addEventListener('change', function () {
 //let oriName = localStorage.getItem('oNameData')
 let oriVal = localStorage.getItem('oData');
 if (oriVal) oriDropdown.value = oriVal;
-
 destDropdown.addEventListener('change', function () {
     localStorage.setItem('dData', this.value);
     // localStorage.setItem('dNameData', this.innerHTML);
@@ -311,14 +185,12 @@ destDropdown.addEventListener('change', function () {
 
             var value = destinationContext[key];
             option1new = document.createElement('option');
-            option1new.text = destinationContext[key] && destinationContext[key].cityName ? `${destinationContext[key].cityName} | ${key}` : key;
+            option1new.text = `${destinationContext[key].cityName} | ${key}`;
             option1new.value = key;
             oriDropdown.add(option1new);
         })
 
     }
-
-
 
 })
 // let destName = localStorage.getItem('dNameData')
@@ -337,8 +209,70 @@ function selectorCheck() {
         getHistoSelect();
     }
 }
-
 /* ENDS reactivity for URL Params*/
+
+
+function refillOrigins() {
+    Object.keys(destinationContext).forEach(key => {
+
+        let option;
+        option1 = document.createElement('option');
+        option1.text = `${destinationContext[key].cityName} | ${key}`;
+        option1.value = key;
+        oriDropdown.add(option1);
+        option1.disable = true;
+    });
+    sortOD(oriDropdown);
+    addDefaultOrigin(oriDropdown);
+
+
+}
+
+function addDefaultOrigin(originsSORTED) {
+
+    defaultOri.text = 'Selecciona tu origen';
+    defaultOri.value = 'OOO';
+    oriDropdown.insertBefore(defaultOri, oriDropdown.firstChild);
+
+
+}
+function sortOD(ORIGINS) {
+    var tArr = new Array();
+    for (var i = 0; i < ORIGINS.options.length; i++) {
+        tArr[i] = new Array();
+        tArr[i][0] = ORIGINS.options[i].text;
+        tArr[i][1] = ORIGINS.options[i].value;
+    }
+    tArr.sort();
+    while (ORIGINS.options.length > 0) {
+        ORIGINS.options[0] = null;
+
+    }
+    for (var i = 0; i < tArr.length; i++) {
+        var op = new Option(tArr[i][0], tArr[i][1]);
+        ORIGINS.options[i] = op;
+    }
+    return;
+}
+function refillDestinations() {
+
+    Object.keys(destinationContext).forEach(key => {
+        option2 = document.createElement('option');
+        option2.text = `${destinationContext[key].cityName} | ${key}`;
+        option2.value = key;
+        destDropdown.add(option2);
+    });
+    sortOD(destDropdown);
+    addDefaultDestination(destDropdown);
+}
+function addDefaultDestination(destinationsSORTED) {
+
+    defaultDest.text = 'Selecciona un destino';
+    defaultDest.value = 'DDD';
+    destDropdown.insertBefore(defaultDest, destDropdown.firstChild);
+
+}
+
 function resetOriginDropdown() {
     length = oriDropdown.options.length;
     while (length--) {
